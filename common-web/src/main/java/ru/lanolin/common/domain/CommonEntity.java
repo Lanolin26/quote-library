@@ -10,12 +10,16 @@ import java.io.Serializable;
 public interface CommonEntity<Id extends Serializable> {
 
     /**
-     * @param id
+     * Устанавливает идентификатор объекта
+     *
+     * @param id идентификатор объекта
      */
     void setId(Id id);
 
     /**
-     * @return
+     * Возвращает идентификатор объекта
+     *
+     * @return идентификатор объекта
      */
     Id getId();
 }

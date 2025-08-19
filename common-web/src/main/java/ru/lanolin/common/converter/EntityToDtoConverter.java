@@ -5,17 +5,21 @@ import ru.lanolin.common.domain.CommonEntity;
 import java.io.Serializable;
 
 /**
- * @param <Entity>
- * @param <Dto>
+ * Интерфейс преобразования сущности в DTO.
+ *
+ * @param <Entity> Тип сущности, которая расширяет {@link CommonEntity}
+ * @param <Dto>    Тип DTO, в который происходит преобразование
  */
 public interface EntityToDtoConverter<
         Entity extends CommonEntity<? extends Serializable>,
         Dto> {
 
     /**
-     * @param entity
+     * Преобразует сущность в DTO.
      *
-     * @return
+     * @param entity Сущность для преобразования
+     *
+     * @return Преобразованная сущность в формате DTO
      */
     Dto convert(Entity entity);
 

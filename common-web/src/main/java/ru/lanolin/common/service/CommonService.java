@@ -7,8 +7,8 @@ import java.io.Serializable;
 /**
  * Типичный {@code Service} для прослойки между web и базой данных
  *
- * @param <Id>
- * @param <Entity>
+ * @param <Id>     тип идентификатора сущности
+ * @param <Entity> тип сущности
  */
 public interface CommonService<Id extends Serializable, Entity extends CommonEntity<Id>>
         extends FindCommonService<Id, Entity>,

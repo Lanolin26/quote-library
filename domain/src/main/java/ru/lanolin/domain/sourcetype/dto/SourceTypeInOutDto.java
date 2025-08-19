@@ -12,11 +12,26 @@ import java.util.UUID;
 public record SourceTypeInOutDto(UUID id, String sourceType)
         implements Serializable {
 
+    /**
+     * Создает экземпляр SourceTypeInOutDto с указанным идентификатором и типом источника.
+     *
+     * @param id         идентификатор источника
+     * @param sourceType тип источника
+     *
+     * @return новый экземпляр SourceTypeInOutDto
+     */
     @Contract("_, _ -> new")
     public static @NotNull SourceTypeInOutDto create(UUID id, @NotNull String sourceType) {
         return new SourceTypeInOutDto(id, sourceType);
     }
 
+    /**
+     * Создает экземпляр SourceTypeInOutDto с указанным типом источника.
+     *
+     * @param sourceType тип источника
+     *
+     * @return новый экземпляр SourceTypeInOutDto
+     */
     @Contract("_ -> new")
     public static @NotNull SourceTypeInOutDto create(@NotNull String sourceType) {
         return new SourceTypeInOutDto(null, sourceType);
