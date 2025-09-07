@@ -2,6 +2,7 @@
 #parse("/templates/layout/layout.vm")
 
 #parse("/templates/components/source-type/view.vm")
+#parse("/templates/components/common/pagging.vm")
 
 #@defaultLayout()
 <h1>Source Type</h1>
@@ -15,5 +16,8 @@
         #end
     </div>
 </div>
+
+#pagginationNav($sourceTypes "nav")
+
 #end
 

@@ -1,12 +1,15 @@
+#* @vtlvariable name="entity" type="ru.lanolin.quote.domain.sourcetype.entity.SourceType" *#
 
-
+#macro(saveST $entity)
 <div class="container source-type-card-edit custom-card">
     <div class="card">
         <div class="card-header">
-            <h5 class="card-title">Create/Edit Source Type</h5>
+            <h5 class="card-title">
+                #if($entity)Edit#{else}Create#{end} Source Type
+            </h5>
         </div>
         <div class="card-body">
-            <form id="save-source-type" method="post" href="#">
+            <form id="save-source-type" method="post" action="$contextPath/rest/source-type/save">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-2">
@@ -17,13 +20,13 @@
                                    id="source-type-name"
                                    class="form-control"
                                    aria-describedby="source-type-HelpInline"
-                                   value="$sourceType.name"
+                                   value="$!{entity.sourceType}"
                             >
                         </div>
                         <div class="col-auto">
-                                <span id="source-type-HelpInline" class="form-text">
-                                  Must be 8-20 characters long.
-                                </span>
+                            <span id="source-type-HelpInline" class="form-text">
+                              Must be 8-20 characters long.
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -31,8 +34,9 @@
         </div>
         <div class="card-footer">
             <button type="submit" class="btn btn-primary" form="save-source-type">
-                Submit
+                #if($entity)Update#{else}Create#{end}
             </button>
         </div>
     </div>
 </div>
+#end

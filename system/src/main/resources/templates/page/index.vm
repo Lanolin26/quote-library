@@ -3,6 +3,5 @@
 #@defaultLayout()
 <p>Hello1</p>
 
-    <p>${hh}</p>
 #end
 
