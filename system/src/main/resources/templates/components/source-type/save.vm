@@ -1,0 +1,38 @@
+
+
+<div class="container source-type-card-edit custom-card">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Create/Edit Source Type</h5>
+        </div>
+        <div class="card-body">
+            <form id="save-source-type" method="post" href="#">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <label for="source-type-name" class="col-form-label">Name</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text"
+                                   id="source-type-name"
+                                   class="form-control"
+                                   aria-describedby="source-type-HelpInline"
+                                   value="$sourceType.name"
+                            >
+                        </div>
+                        <div class="col-auto">
+                                <span id="source-type-HelpInline" class="form-text">
+                                  Must be 8-20 characters long.
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary" form="save-source-type">
+                Submit
+            </button>
+        </div>
+    </div>
+</div>

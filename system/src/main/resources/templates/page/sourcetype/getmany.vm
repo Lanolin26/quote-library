@@ -1,0 +1,19 @@
+#* @vtlvariable name="sourceTypes" type="org.springframework.data.domain.Page<ru.lanolin.quote.domain.sourcetype.entity.SourceType>" *#
+#parse("/templates/layout/layout.vm")
+
+#parse("/templates/components/source-type/view.vm")
+
+#@defaultLayout()
+<h1>Source Type</h1>
+
+<div class="container">
+    <div class="row row-cols-auto">
+        #foreach($entity in $sourceTypes.content)
+        <div class="col">
+            #viewST($entity)
+        </div>
+        #end
+    </div>
+</div>
+#end
+

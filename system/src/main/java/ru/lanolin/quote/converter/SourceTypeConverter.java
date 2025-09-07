@@ -1,8 +1,8 @@
 package ru.lanolin.quote.converter;
 
 import ru.lanolin.common.converter.CommonConverter;
-import ru.lanolin.domain.sourcetype.dto.SourceTypeInOutDto;
-import ru.lanolin.domain.sourcetype.entity.SourceType;
+import ru.lanolin.quote.domain.sourcetype.dto.SourceTypeInOutDto;
+import ru.lanolin.quote.domain.sourcetype.entity.SourceType;
 
 public class SourceTypeConverter implements CommonConverter<SourceType, SourceTypeInOutDto> {
 

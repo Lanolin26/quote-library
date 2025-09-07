@@ -1,0 +1,100 @@
+<div class="container quote-card-view custom-card">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Create/Edit Quote</h5>
+        </div>
+        <div class="card-body">
+            <form id="save-quote" method="post" href="#">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="quote-author-field" class="col-form-label">Author</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="quote-author-field"
+                                   class="form-control"
+                                   aria-describedby="quote-author-field-help"
+                                   value="$quote.author"
+                            >
+                        </div>
+                        <div class="col-auto">
+                                <span id="quote-author-field-help" class="form-text">
+                                  Must be 8-20 characters long.
+                                </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="quote-source.type-field" class="col-form-label">Source Type</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="quote-source.type-field"
+                                   class="form-control"
+                                   aria-describedby="quote-source.type-field-help"
+                                   value="$quote.source.type"
+                            >
+                        </div>
+                        <div class="col-auto">
+                                <span id="quote-source.type-field-help" class="form-text">
+                                  Must be 8-20 characters long.
+                                </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="quote-source-field" class="col-form-label">Source</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="quote-source-field"
+                                   class="form-control"
+                                   aria-describedby="quote-source-field-help"
+                                   value="$quote.source"
+                            >
+                        </div>
+                        <div class="col-auto">
+                                <span id="quote-source-field-help" class="form-text">
+                                  Must be 8-20 characters long.
+                                </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="quote-text-field" class="col-form-label">Text</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="hidden" id="quote-text-field"
+                                   class="form-control"
+                                   value="$quote.text"
+                            >
+                            <div class="quote-text-field"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="card-link">Card link</a>
+        </div>
+    </div>
+</div>
+
+<script type="module">
+    import { Editor } from 'https://esm.sh/@tiptap/core'
+    import StarterKit from 'https://esm.sh/@tiptap/starter-kit'
+    // import StarterKit from './js/tiptap/starter-kit-3.3.0/index.js'
+    // import Document from 'https://esm.sh/@tiptap/extension-document'
+    // import Paragraph from 'https://esm.sh/@tiptap/extension-paragraph'
+    // import Text from 'https://esm.sh/@tiptap/extension-text'
+
+    const textElement = document.getElementById('quote-text-field')
+
+    const editor = new Editor({
+        element: document.querySelector('.quote-text-field'),
+        extensions: [StarterKit],
+        content: '<p>Hello World!</p>',
+        onUpdate({ editor }) {
+            textElement.value = editor.getHTML()
+        },
+    })
+</script>

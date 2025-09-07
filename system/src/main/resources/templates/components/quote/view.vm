@@ -1,0 +1,71 @@
+<div class="container quote-card-view custom-card">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Quote</h5>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        Author
+                    </div>
+                    <div class="col-6">
+                        $quote.author
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        Source
+                    </div>
+                    <div class="col-6">
+                        $quote.source
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        Source Type
+                    </div>
+                    <div class="col-6">
+                        $quote.source.type
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        Create date
+                    </div>
+                    <div class="col-6">
+                        $quote.create
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        Update date
+                    </div>
+                    <div class="col-6">
+                        $quote.update
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        Text
+                    </div>
+                    <div class="col-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at efficitur lorem.
+                            Sed gravida pharetra sollicitudin. Mauris tortor ex, faucibus a maximus id, lobortis
+                            eget ante. Nam commodo ac nunc sit amet sodales. Vivamus vitae odio interdum, venenatis
+                            nunc at, cursus lacus. Vestibulum nec felis justo. Pellentesque sed sodales neque. Etiam
+                            convallis in lacus at blandit. Orci varius natoque penatibus et magnis dis parturient
+                            montes, nascetur ridiculus mus. Mauris varius pretium neque nec vehicula. Maecenas non
+                            pretium elit, eu ornare metus. Ut felis sem, fermentum non cursus vel, accumsan sagittis
+                            sem. Suspendisse facilisis venenatis rhoncus. Pellentesque velit ante, porta ac sem
+                            quis, tincidunt auctor lacus.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="card-link">Card link</a>
+        </div>
+    </div>
+</div>

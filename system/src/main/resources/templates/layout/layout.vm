@@ -1,0 +1,15 @@
+#macro(defaultLayout)
+<!DOCTYPE html>
+<html lang="ru">
+    #parse("/templates/layout/head.vm")
+<body>
+    #parse("/templates/layout/header.vm")
+
+<main>
+    $!bodyContent
+</main>
+
+    #parse("/templates/layout/footer.vm")
+</body>
+</html>
+#end

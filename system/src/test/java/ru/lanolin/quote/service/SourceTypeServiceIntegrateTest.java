@@ -33,7 +33,7 @@ class SourceTypeServiceIntegrateTest {
     }
 
     @Test
-    void getALl() {
+    void getAll() {
         // Arrange
         // Act
         // Assert
