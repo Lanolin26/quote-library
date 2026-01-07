@@ -1,7 +1,0 @@
-#parse("/templates/layout/layout.vm")
-
-#@defaultLayout()
-<p>Hello1</p>
-
-#end
-

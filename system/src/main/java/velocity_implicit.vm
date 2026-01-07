@@ -1,5 +1,0 @@
-#* @implicitly included *#
-#* @vtlvariable name="global" type="ru.lanolin.quote.velocity.GlobalParameter" *#
-#* @vtlvariable name="contextPath" type="java.lang.String" *#
-#* @vtlvariable name="req" type="jakarta.servlet.http.HttpServletRequest" *#
-

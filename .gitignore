@@ -1,6 +1,6 @@
 HELP.md
 target/
-!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -32,15 +32,5 @@ build/
 ### VS Code ###
 .vscode/
 
-### Не нужная статика ###
-/system/src/main/resources/static/metadata/
-/system/src/main/resources/static/less/
-/system/src/main/resources/static/scss/
-/system/src/main/resources/static/sprites/
-/system/src/main/resources/static/svgs/
-/system/src/main/resources/static/webfonts/
-!/system/src/main/resources/static/webfonts/.gitkeep
-/system/src/main/resources/static/js/
-!/system/src/main/resources/static/js/**/.gitkeep
-/system/src/main/resources/static/css/
-!/system/src/main/resources/static/css/**/.gitkeep
+### JTE ###
+/jte-classes/
